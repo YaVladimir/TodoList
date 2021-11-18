@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import React, { useState } from 'react'
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
+import ClearIcon from '@mui/icons-material/Clear'
 import {
   ListItem,
   ListItemButton,
@@ -22,6 +24,14 @@ export function TodoListItem(props) {
         <ListItemText primary={text} />
       </ListItemButton>
       <ColorSelector id={id} color={color} />
+      <ListItemButton
+        onClick={() => dispatch({ type: 'todos/todoDeleted', payload: id })}
+        sx={{ maxWidth: 40 }}
+      >
+        <ListItemIcon>
+          <ClearIcon />
+        </ListItemIcon>
+      </ListItemButton>
     </ListItem>
   )
 }

@@ -27,7 +27,7 @@ export default function todosReducer(state = [], action) {
       });
     case "todos/colorSelected":
       return state.map((todo) => {
-        if (todo.id !== action.payload.todoId) {
+        if (todo.id !== action.payload.id) {
           return todo;
         }
         return {

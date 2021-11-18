@@ -1,21 +1,27 @@
 import { useDispatch, useSelector } from 'react-redux'
 import React, { useState } from 'react'
-import { ListItem, ListItemButton, ListItemText, Checkbox } from '@mui/material'
+import {
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Checkbox,
+  ListItemIcon,
+} from '@mui/material'
+import { ColorSelector } from '../ColorSelector/ColorSelector'
 
 export function TodoListItem(props) {
-  const { completed, text } = props.todo
+  const { completed, text, id, color } = props.todo
   const dispatch = useDispatch()
 
   return (
-    <ListItem>
+    <ListItem divider={true}>
       <ListItemButton
-        onClick={() =>
-          dispatch({ type: 'todos/todoToggled', payload: props.id })
-        }
+        onClick={() => dispatch({ type: 'todos/todoToggled', payload: id })}
       >
         <Checkbox checked={completed} />
         <ListItemText primary={text} />
       </ListItemButton>
+      <ColorSelector id={id} color={color} />
     </ListItem>
   )
 }

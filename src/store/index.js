@@ -13,6 +13,6 @@ if (persistedTodosString) {
 
 const combinedMiddleware = applyMiddleware(print1, print2, print3);
 
-const store = createStore(rootReducer, preloadedState, combinedMiddleware);
+const store = createStore(rootReducer, preloadedState);
 
 export default store;

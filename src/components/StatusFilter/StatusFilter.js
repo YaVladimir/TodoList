@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Status } from '../../feature/filter/filterSlice'
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles'
 import { Button, Stack } from '@mui/material'
 
 const FunctionButton = styled(Button)(({ theme }) => ({
@@ -16,6 +16,7 @@ export default function StatusFilter() {
 
   return (
     <Stack>
+      <h4>Filter By Status</h4>
       <FunctionButton
         onClick={() =>
           dispatch({

@@ -5,16 +5,14 @@ import { Select, MenuItem } from '@mui/material'
 export function ColorSelector(props) {
   const selectedColor = props.color
   const dispatch = useDispatch()
-
+  console.log(selectedColor)
   return (
     <Select
       labelId="demo-simple-select-label"
       value={selectedColor}
       label="Color"
       autoWidth={false}
-      onOpen={(event) => event.stopPropagation()}
       onChange={(event) => {
-        event.stopPropagation()
         handleChange(event.target.value, props.id)
       }}
       sx={{ minWidth: 120 }}

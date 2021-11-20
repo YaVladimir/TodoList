@@ -3,6 +3,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CompletedTodos from '../CompletedTodos/CompletedTodos'
 import StatusFilter from '../StatusFilter/StatusFilter'
+import ColorFilter from '../ColorFilter/ColorFilter'
 
 export default function Footer() {
   const filter = useSelector((state) => state.filters)
@@ -12,6 +13,7 @@ export default function Footer() {
     <Grid>
       <CompletedTodos />
       <StatusFilter />
+      <ColorFilter />
     </Grid>
   )
 }

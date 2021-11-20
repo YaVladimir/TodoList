@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Select, MenuItem } from '@mui/material'
 
 export function ColorSelector(props) {

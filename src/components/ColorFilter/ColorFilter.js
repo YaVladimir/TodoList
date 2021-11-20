@@ -5,7 +5,7 @@ import { Checkbox, Stack } from '@mui/material'
 
 export default function ColorFilter() {
   const dispatch = useDispatch()
-  const getActionType = (event) => {
+  const getChangeType = (event) => {
     return event.target.checked ? 'added' : 'removed'
   }
   return (
@@ -16,8 +16,8 @@ export default function ColorFilter() {
         sx={{ color: red[800], '&.Mui-checked': { color: red[600] } }}
         onChange={(event) =>
           dispatch({
-            type: getActionType(event),
-            payload: 'red',
+            type: 'filters/colorFilterChanged',
+            payload: { changeType: getChangeType(event), color: 'red' },
           })
         }
       />
@@ -26,8 +26,8 @@ export default function ColorFilter() {
         sx={{ color: blue[800], '&.Mui-checked': { color: blue[600] } }}
         onChange={(event) =>
           dispatch({
-            type: getActionType(event),
-            payload: 'blue',
+            type: 'filters/colorFilterChanged',
+            payload: { changeType: getChangeType(event), color: 'blue' },
           })
         }
       />
@@ -36,8 +36,8 @@ export default function ColorFilter() {
         sx={{ color: green[800], '&.Mui-checked': { color: green[600] } }}
         onChange={(event) =>
           dispatch({
-            type: getActionType(event),
-            payload: 'green',
+            type: 'filters/colorFilterChanged',
+            payload: { changeType: getChangeType(event), color: 'green' },
           })
         }
       />
@@ -46,8 +46,8 @@ export default function ColorFilter() {
         sx={{ color: purple[800], '&.Mui-checked': { color: purple[600] } }}
         onChange={(event) =>
           dispatch({
-            type: getActionType(event),
-            payload: 'purple',
+            type: 'filters/colorFilterChanged',
+            payload: { changeType: getChangeType(event), color: 'purple' },
           })
         }
       />

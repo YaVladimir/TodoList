@@ -1,11 +1,11 @@
-export const StatusFilter = {
+export const Status = {
   All: "all",
   Active: "active",
   Completed: "completed"
 };
 
 const initialState = {
-  status: StatusFilter.All,
+  status: Status.All,
   colors: []
 };
 

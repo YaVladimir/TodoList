@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import { TodoList } from './components/TodoList/TodoList'
 
@@ -20,6 +21,9 @@ function App() {
           <h2>Todos</h2>
           <Header />
           <TodoList />
+      </section>
+      <section>
+        <Footer />
       </section>
     </div>
   )

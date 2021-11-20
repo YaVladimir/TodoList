@@ -41,7 +41,6 @@ export default function ColorFilter() {
           })
         }
       />
-
       <Checkbox
         label={'Purple'}
         sx={{ color: purple[800], '&.Mui-checked': { color: purple[600] } }}
